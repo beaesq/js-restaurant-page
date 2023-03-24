@@ -1,17 +1,4 @@
-console.log('stan loona');
+import './style.css';
+import { content } from './content.js';
 
-function component() {
-  const element = document.createElement('div');
- const btn = document.createElement('button');
-
-  element.innerHTML = 'hello'
-
- btn.innerHTML = 'Click me and check the console!';
- btn.onclick = () => console.log('stanloona');
-
- element.appendChild(btn);
-
-  return element;
-}
-
-document.body.appendChild(component());
+document.body.appendChild(content());
