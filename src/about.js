@@ -7,34 +7,8 @@ const restaurant = (() => {
   return { name, copy, hours, location };
 })();
 
-const content = () => {
-  let divContainer = document.createElement('div');
-  divContainer.innerHTML = ""; // idk if i need this
-
-  divContainer.classList.add('container');
-  divContainer.setAttribute('id', 'container');
-
-  const divHeader = document.createElement('div');
-  divHeader.classList.add('header');
-  divHeader.setAttribute('id', 'header');
-  divHeader.textContent = restaurant.name;
-  divContainer.appendChild(divHeader);
-
-  const divFooter = document.createElement('div');
-  divFooter.classList.add('footer');
-  divFooter.setAttribute('id', 'footer');
-  divFooter.innerHTML = '2023 · Background photo by&nbsp;<a href="https://unsplash.com/@rojekilian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sarah Kilian</a>&nbsp;on&nbsp;<a href="https://unsplash.com/photos/7BQzWIQOv9E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>';
-  divContainer.appendChild(divFooter);
-
-  document.body.appendChild(divContainer);
-
-  main();
-};
-
-const main = () => {
-  console.log('main');
-  let divContainer = document.getElementById('container');
-  let divContent = document.createElement('div');
+const about = () => {
+  let divContent = document.getElementById('content');
   divContent.classList.add('content');
   divContent.setAttribute('id', 'content');
 
@@ -69,8 +43,6 @@ const main = () => {
   divLocationText.textContent = restaurant.location;
   divLocationContainer.appendChild(divLocationText);
   divContent.appendChild(divLocationContainer);
-
-  divContainer.appendChild(divContent);
 };
 
-export { content };
+export { about };
