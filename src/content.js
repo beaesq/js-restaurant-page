@@ -12,14 +12,31 @@ const content = () => {
   divContainer.innerHTML = ""; // idk if i need this
 
   divContainer.classList.add('container');
+  divContainer.setAttribute('id', 'container');
 
-  const divName = document.createElement('div');
-  divName.classList.add('header');
-  divName.textContent = restaurant.name;
-  divContainer.appendChild(divName);
+  const divHeader = document.createElement('div');
+  divHeader.classList.add('header');
+  divHeader.setAttribute('id', 'header');
+  divHeader.textContent = restaurant.name;
+  divContainer.appendChild(divHeader);
 
+  const divFooter = document.createElement('div');
+  divFooter.classList.add('footer');
+  divFooter.setAttribute('id', 'footer');
+  divFooter.innerHTML = '2023 · Background photo by&nbsp;<a href="https://unsplash.com/@rojekilian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sarah Kilian</a>&nbsp;on&nbsp;<a href="https://unsplash.com/photos/7BQzWIQOv9E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>';
+  divContainer.appendChild(divFooter);
+
+  document.body.appendChild(divContainer);
+
+  main();
+};
+
+const main = () => {
+  console.log('main');
+  let divContainer = document.getElementById('container');
   let divContent = document.createElement('div');
   divContent.classList.add('content');
+  divContent.setAttribute('id', 'content');
 
   const divCopy = document.createElement('div');
   divCopy.classList.add('content-text');
@@ -54,13 +71,6 @@ const content = () => {
   divContent.appendChild(divLocationContainer);
 
   divContainer.appendChild(divContent);
-
-  const divFooter = document.createElement('div');
-  divFooter.classList.add('footer');
-  divFooter.innerHTML = '2023 · Background photo by&nbsp;<a href="https://unsplash.com/@rojekilian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sarah Kilian</a>&nbsp;on&nbsp;<a href="https://unsplash.com/photos/7BQzWIQOv9E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>';
-  divContainer.appendChild(divFooter);
-
-  return divContainer;
-}
+};
 
 export { content };
