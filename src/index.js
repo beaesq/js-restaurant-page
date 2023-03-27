@@ -1,5 +1,7 @@
 import './style.css';
 import { about } from './about.js';
+import { menu } from './menu.js';
+import { contact } from './contact.js';
 import _ from 'lodash';
 
 const restaurant = require('./restaurant.json');
@@ -45,7 +47,7 @@ const content = () => {
   divContainer.appendChild(divFooter);
 
   document.body.appendChild(divContainer);
-  about();
+  about(restaurant);
 };
 
 content();
@@ -59,20 +61,46 @@ header.addEventListener('click', (e) => {
     while (div.firstChild) {
       div.removeChild(div.firstChild);
     }
-    
+
+    setTabStyling(tab, e);
+      
     switch (tab) {
       case 'about':
-        about();
+        about(restaurant);
         break;
       case 'menu':
-        menu();
+        menu(restaurant);
         break;
       case 'contact':
-        contact();
+        contact(restaurant);
         break;
        default:
-        about();
+        about(restaurant);
         break;
     }
   }
 });
+
+const setTabStyling = (tab, e) => {
+  const links = e.currentTarget.getElementsByClassName('links');
+  
+  for (const child of links[0].children) {
+    child.classList.add('tab-not-selected');
+  }
+  
+  const selected = document.querySelector(`[tab = "${tab}"]`);
+  switch (tab) {
+    case 'about':
+      selected.setAttribute('class','tab tab-selected');
+      break;
+    case 'menu':
+      selected.setAttribute('class','tab tab-selected');
+      break;
+    case 'contact':
+      selected.setAttribute('class','tab tab-selected');
+      break;
+     default:
+      
+      break;
+  }
+};

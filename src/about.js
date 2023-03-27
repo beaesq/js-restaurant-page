@@ -1,16 +1,6 @@
-const restaurant = (() => {
-  const name = 'Cafe LOONA';
-  const copy = 'Will you whisper to me? You’re the dejavu that wakes me up Now, is it you now? I can feel it coming, a mirage with wings How? is it true now?';
-  const hours = ['Sunday: 8am - 8pm', 'Monday: 12pm - 12am', 'Tuesday: 12pm - 12am', 'Wednesday: 12pm - 12am', 'Thursday: 12pm - 12am', 'Friday: 12pm - 12am', 'Saturday: 12pm - 12am'];
-  const location = '111 Orbit Drive, Satellite City, Moon';
-
-  return { name, copy, hours, location };
-})();
-
-const about = () => {
+const about = (restaurant) => {
   let divContent = document.getElementById('content');
-  divContent.classList.add('content');
-  divContent.setAttribute('id', 'content');
+  divContent.classList.add('content-about');
 
   const divCopy = document.createElement('div');
   divCopy.classList.add('content-text');

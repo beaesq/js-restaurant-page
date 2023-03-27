@@ -2,5 +2,81 @@
   "name": "Cafe LOONA",
   "copy": "Will you whisper to me? You’re the dejavu that wakes me up Now, is it you now? I can feel it coming, a mirage with wings How? is it true now?",
   "hours": ["Sunday: 8am - 8pm", "Monday: 12pm - 12am", "Tuesday: 12pm - 12am", "Wednesday: 12pm - 12am", "Thursday: 12pm - 12am", "Friday: 12pm - 12am", "Saturday: 12pm - 12am"],
-  "location": "111 Orbit Drive, Satellite City, Moon"
+  "location": "111 Orbit Drive, Satellite City, Moon",
+  "contact": [
+    {
+      "name": "Heejin", 
+      "title": "Barista", 
+      "email": "heejin@cafeloona.com", 
+      "tel": "111-111-1111", 
+      "image": "hare.png"
+    },
+    {
+      "name": "Hyunjin", 
+      "title": "Baker", 
+      "email": "aeong@cafeloona.com", 
+      "tel": "222-222-2222", 
+      "image": "cougar.png"
+    }
+  ],
+  "menu": [
+    {
+      "category": "Mains",
+      "items": [
+        {
+          "name": "Flip That Pancakes", 
+          "image": "pancake.jpg", 
+          "description": "Twelve pancakes topped with fresh seasonal fruit"
+        },
+        {
+          "name": "Cherry", 
+          "image": "cherry.jpg", 
+          "description": "The cherry from the Love Cherry Motion MV"
+        },
+        {
+          "name": "Cocomong", 
+          "image": "cocomong.jpeg", 
+          "description": "Sausage monkey. yum yummy yum yum yum!"
+        },
+        {
+          "name": "StarSeed Sandwich", 
+          "image": "sandwich.jpg", 
+          "description": "It's shaped like a star? And it has seeds? idk"
+        }
+      ]
+    }, {
+      "category": "Bread",
+      "items": [
+        {
+          "name": "Aeongpan", 
+          "image": "aeongpan.jpg", 
+          "description": "Cat-shaped melon pan with a soft custard filling. Aeong~"
+        },
+        {
+          "name": "Baguette", 
+          "image": "baguette.jpg", 
+          "description": "Je m'appelle Heejin"
+        }
+      ]
+    }, {
+      "category": "Drinks",
+      "items": [
+        {
+          "name": "Café Latte", 
+          "image": "latte.jpg", 
+          "description": "Non-dairy options available"
+        },
+        {
+          "name": "Apple Juice", 
+          "image": "applejuice.jpg", 
+          "description": "Freshly made from only the best Eden apples"
+        },
+        {
+          "name": "Fish Tank Water", 
+          "image": "water.jpg", 
+          "description": "Fish tank water"
+        }
+      ]
+    }
+  ]
 }
